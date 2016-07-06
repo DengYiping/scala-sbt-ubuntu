@@ -5,7 +5,7 @@ ENV SBT_VERSION 0.13.11
 
 # Install Scala
 ## Piping curl directly in tar
-RUN apt-get install -y curl
+RUN apt-get update && apt-get install -y curl
 RUN \
   curl -fsL http://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_VERSION.tgz | tar xfz - -C /root/ && \
   echo >> /root/.bashrc && \
